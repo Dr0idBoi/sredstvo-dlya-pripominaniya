@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Средство для припоминания</title>
+<meta name="description" content="Знание переехало в облако, нейросеть пишет эссе за пару секунд. Зачем тогда учиться? Мультимедийный лонгрид по мотивам встречи с Евгением Примаковым.">
+<meta property="og:title" content="Средство для припоминания">
+<meta property="og:description" content="Знание переехало в облако, нейросеть пишет эссе за пару секунд. Зачем тогда учиться?">
+<meta property="og:image" content="assets/img/cover-servers.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%2322409A%22/%3E%3Ctext x=%2216%22 y=%2224%22 font-family=%22Georgia,serif%22 font-size=%2222%22 text-anchor=%22middle%22 fill=%22%23ECEEF1%22%3E%D0%A1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#perehod">К тексту</a>
+
+<div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+<nav class="toc" aria-label="Содержание">
+  <button class="toc__toggle" type="button" aria-expanded="false" aria-controls="toc-list">Содержание</button>
+  <ol class="toc__list" id="toc-list" hidden>
+    <li><a href="#cover">Средство для припоминания</a></li>
+    <li><a href="#check">Проверьте себя</a></li>
+    <li><a href="#perehod">Третий переход</a></li>
+    <li><a href="#timeline">От глины до облака</a></li>
+    <li><a href="#platon">Царь и бог письма</a></li>
+    <li><a href="#nauka">Что говорят исследования</a></li>
+    <li><a href="#kalkulyator">Калькулятор не убил математику</a></li>
+    <li><a href="#auditoriya">Тем временем в аудитории</a></li>
+    <li><a href="#ne-nravitsya">«Нет, не нравится»</a></li>
+    <li><a href="#chip">Человек с чипом</a></li>
+    <li><a href="#istochniki">Источники и авторы</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- 1. Обложка -->
+<section class="cover" id="cover">
+  <figure class="cover__media">
+    <img src="assets/img/cover-servers.webp" width="1920" height="817" alt="Стойки серверов с огоньками индикаторов в дата-центре">
+  </figure>
+  <div class="cover__inner">
+    <h1 class="cover__title" data-forget>Средство для припоминания</h1>
+    <p class="cover__hint" aria-hidden="true"><span class="hint-pointer">Наведите курсор на заголовок, чтобы вспомнить забытые буквы</span><span class="hint-touch">Коснитесь заголовка, чтобы вспомнить забытые буквы</span></p>
+    <p class="cover__sub">Знание переехало в облако, нейросеть пишет эссе за пару секунд. Зачем тогда учиться?</p>
+    <p class="cover__lead">«Отсюда иллюзия и дикое искушение: в&nbsp;принципе не&nbsp;нужно ничего изучать», — сказал студентам журналист Евгений Примаков. Почти 2400 лет назад Платон приписал похожий страх египетскому царю, только речь тогда шла о&nbsp;письменности. Мы проверили, чем нейросеть отличается от&nbsp;книги и&nbsp;есть ли у&nbsp;новой тревоги основания.</p>
+    <p class="cover__byline">Авторы: Элена Мустафина, Марина Штукатурова</p>
+  </div>
+  <p class="cover__credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_13.jpg">Victorgrigas</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">CC BY-SA 3.0</a></p>
+</section>
+
+<!-- 2. Хук -->
+<section class="check" id="check" aria-labelledby="check-title">
+  <div class="check__text">
+    <h2 id="check-title">Проверьте себя</h2>
+    <p>Не заглядывая в&nbsp;контакты, наберите номер близкого человека: мамы, брата, партнёра.</p>
+    <p class="check__note">Набранные цифры остаются на этой странице и никуда не отправляются.</p>
+  </div>
+
+  <div class="phone" role="group" aria-label="Клавиатура телефона">
+    <output class="phone__screen" aria-live="polite"><span class="phone__digits"></span><span class="phone__caret" aria-hidden="true"></span></output>
+    <div class="phone__keys">
+      <button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button>
+      <button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button>
+      <button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button>
+      <button type="button" data-key="+">+</button><button type="button" data-key="0">0</button><button type="button" data-key="back" aria-label="Стереть цифру">⌫</button>
+    </div>
+    <div class="phone__answers">
+      <button type="button" class="btn" data-answer="yes">Вспомнил(а)</button>
+      <button type="button" class="btn btn--ghost" data-answer="no">Не помню</button>
+    </div>
+  </div>
+
+  <div class="check__result" id="check-result" hidden tabindex="-1">
+    <p class="check__verdict" data-verdict-yes hidden>Вы справились. В&nbsp;опросе 2015 года это удалось далеко не всем.</p>
+    <p class="check__verdict" data-verdict-no hidden>Если не вспомнили, вы в&nbsp;большинстве.</p>
+    <p>«Лаборатория Касперского» опросила 6000 человек в&nbsp;шести странах Европы. Вот сколько из них не&nbsp;смогли назвать номер по&nbsp;памяти:</p>
+    <ul class="bars">
+      <li><span class="bars__label">номер своего ребёнка</span><span class="bars__track"><span class="bars__fill" style="--v:53"></span></span><span class="bars__num">53%</span></li>
+      <li><span class="bars__label">рабочий телефон</span><span class="bars__track"><span class="bars__fill" style="--v:51"></span></span><span class="bars__num">51%</span></li>
+      <li><span class="bars__label">номер партнёра</span><span class="bars__track"><span class="bars__fill" style="--v:33"></span></span><span class="bars__num">около трети</span></li>
+    </ul>
+    <p>Исследователи назвали это «цифровой амнезией». С&nbsp;номерами телефонов это никому не&nbsp;мешает. Нейросети предлагают отдать им задачи посложнее.</p>
+    <p class="source">Источник: <a href="https://kaspersky.co.za/about/press-releases/kaspersky-lab-diagnoses-digital-amnesia-consumers-struggle-to-recall-memories-trusted-to-connected-devices">Kaspersky Lab, 2015</a></p>
+  </div>
+</section>
+
+<!-- 3. Третий переход -->
+<section class="prose" id="perehod" aria-labelledby="perehod-title">
+  <h2 id="perehod-title">Третий переход</h2>
+  <p>Евгений Примаков много лет работал международным журналистом, руководил ближневосточным бюро НТВ и&nbsp;вёл «Международное обозрение» на&nbsp;«России&nbsp;24». С&nbsp;2020 года до&nbsp;апреля 2026-го он возглавлял Россотрудничество. Встречу со&nbsp;студентами он начал с&nbsp;практики: телевизор, по&nbsp;его словам, нужен медиапроекту, «чтобы что-то заякорить», а&nbsp;аудитория давно сидит в&nbsp;смартфоне. Потом перешёл к&nbsp;философии.</p>
+  <blockquote class="pull">
+    <p>«Прямо сейчас, пока мы с&nbsp;вами разговариваем, мы проходим через очень важный фазовый переход — не&nbsp;функциональный, а&nbsp;фундаментальный».</p>
+  </blockquote>
+  <p>Таких переходов, считает Примаков, в&nbsp;истории было три.</p>
+  <ol class="three">
+    <li><span class="three__n">1</span>Человечество перенесло знание из&nbsp;устной традиции на&nbsp;внешний носитель.</li>
+    <li><span class="three__n">2</span>Информацию научились тиражировать, и&nbsp;она стала общедоступной.</li>
+    <li><span class="three__n">3</span>«Третий мы проходим сейчас: знание вынесено в&nbsp;облако».</li>
+  </ol>
+  <p>Из этого он выводит главную опасность.</p>
+</section>
+
+<section class="band" aria-label="Главная цитата Евгения Примакова">
+  <blockquote class="band__quote">
+    <p>«Отсюда иллюзия и&nbsp;дикое искушение: в&nbsp;принципе не&nbsp;нужно ничего изучать, потому что всегда можно к&nbsp;этому обратиться».</p>
+    <footer>Евгений Примаков, журналист</footer>
+  </blockquote>
+</section>
+
+<section class="prose prose--after-band">
+  <p>Примаков не&nbsp;первый, кто так думает. Каждый из&nbsp;трёх переходов сопровождала похожая тревога. Мы прошли по&nbsp;ним по&nbsp;очереди, чтобы понять, сбывалась ли она раньше и&nbsp;чем отличается нынешний случай.</p>
+</section>
+
+<!-- 4. Таймлайн -->
+<section class="timeline" id="timeline" aria-labelledby="timeline-title">
+  <div class="timeline__head">
+    <h2 id="timeline-title">От глины до облака</h2>
+    <p>Пять тысяч лет внешней памяти. Листайте вбок.</p>
+    <div class="timeline__nav">
+      <button type="button" class="tl-btn" data-dir="-1" aria-label="Назад по таймлайну">‹</button>
+      <button type="button" class="tl-btn" data-dir="1" aria-label="Вперёд по таймлайну">›</button>
+    </div>
+  </div>
+  <ol class="timeline__track" tabindex="0" aria-label="Таймлайн, прокручивается горизонтально">
+    <li class="era era--clay">
+      <p class="era__year">ок. 3350–3000 <small>до н.&nbsp;э.</small></p>
+      <p class="era__place">Урук, Южная Месопотамия</p>
+      <figure>
+        <img src="assets/img/uruk-tablet.webp" width="1600" height="1070" alt="Глиняная табличка с протоклинописными знаками">
+        <figcaption>Табличка позднего урукского периода, 3300–3100 гг. до&nbsp;н.&nbsp;э.: список выдачи продовольствия. Британский музей. <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Clay_tablet,_late_Uruk_period,_3300-3100_BCE._Proto-cuneiform_signs,_food_issue_list_%22_rations%22_written_by_combining_a_human_head_and_a_bowl._Purchased_via_Christie%27s_in_1989,_with_contribution_from_the_British_Museum_Friends.jpg">Osama Shukir Muhammed Amin</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">CC BY-SA 4.0</a></span></figcaption>
+      </figure>
+      <p>Появляется протоклинопись. Тексты почти все хозяйственные, вроде списков выдачи продовольствия.</p>
+      <p>Канадский экономист и&nbsp;историк Гарольд Иннис в&nbsp;книге «Империя и&nbsp;коммуникации» (1950) делил носители на&nbsp;два типа. Тяжёлые, вроде глины и&nbsp;камня, хранят знание долго, но&nbsp;далеко не&nbsp;уходят. Лёгкие, вроде папируса и&nbsp;бумаги, живут недолго, зато расходятся широко.</p>
+    </li>
+    <li class="era era--clay">
+      <p class="era__year">ок. 370 <small>до н.&nbsp;э.</small></p>
+      <p class="era__place">Афины</p>
+      <figure>
+        <img src="assets/img/plato.webp" width="1600" height="2252" alt="Мраморный портрет Платона" class="img--portrait">
+        <figcaption>Платон. Римская копия портрета работы Силаниона, Капитолийские музеи. <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377_(cropped).jpg">Marie-Lan Nguyen</a> / Wikimedia Commons, общественное достояние</span></figcaption>
+      </figure>
+      <p>Платон пишет диалог «Федр». В&nbsp;нём египетский царь Тамус отвечает богу Тевту, изобретателю письма, что тот нашёл «средство не&nbsp;для памяти, а&nbsp;для припоминания».</p>
+    </li>
+    <li class="era era--paper">
+      <p class="era__year">1450-е</p>
+      <p class="era__place">Майнц</p>
+      <figure>
+        <img src="assets/img/gutenberg-bible.webp" width="1600" height="1000" alt="Раскрытая Библия Гутенберга под стеклом">
+        <figcaption>Библия Гутенберга, экземпляр Ленокса, Нью-Йоркская публичная библиотека. <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Gutenberg_Bible,_Lenox_Copy,_New_York_Public_Library,_2009._Pic_01.jpg">NYC Wanderer (Kevin Eng)</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.ru">CC BY-SA 2.0</a></span></figcaption>
+      </figure>
+      <p>Иоганн Гутенберг печатает книги наборным шрифтом. Его Библия выходит около 1455 года. В&nbsp;каталоге изданий XV века, который ведёт Британская библиотека, сегодня больше 30&nbsp;тысяч записей.</p>
+    </li>
+    <li class="era era--paper">
+      <p class="era__year">1946</p>
+      <p class="era__place">Филадельфия</p>
+      <figure>
+        <img src="assets/img/eniac.webp" width="1340" height="1024" alt="Двое операторов у панелей ENIAC">
+        <figcaption>Глен Бек и&nbsp;Бетти Снайдер программируют ENIAC. <span class="credit">Фото: армия США / <a href="https://commons.wikimedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg">Wikimedia Commons</a>, общественное достояние</span></figcaption>
+      </figure>
+      <p>Пенсильванский университет показывает публике ENIAC, один из&nbsp;первых электронных компьютеров общего назначения.</p>
+    </li>
+    <li class="era era--digit">
+      <p class="era__year">2007</p>
+      <p class="era__place">Весь мир</p>
+      <div class="era__stat" aria-hidden="true"><span>94%</span></div>
+      <p>По подсчёту Мартина Хилберта и&nbsp;Присциллы Лопес (журнал Science), 94% всей информации, которую хранит человечество, уже цифровая. Телекоммуникации цифровые на&nbsp;99,9%.</p>
+    </li>
+    <li class="era era--digit">
+      <p class="era__year">2011</p>
+      <p class="era__place">США</p>
+      <p>Психологи Бетси Спэрроу, Дженни Лю и&nbsp;Дэниел Вегнер описывают «эффект Google»: люди хуже запоминают то, что, как они уверены, всегда можно найти.</p>
+    </li>
+    <li class="era era--digit">
+      <p class="era__year">ноябрь 2022</p>
+      <p class="era__place">Облако</p>
+      <figure>
+        <img src="assets/img/servers.webp" width="1600" height="1067" alt="Кабели и индикаторы серверной стойки крупным планом">
+        <figcaption>Серверы Фонда Викимедиа. <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_22.jpg">Victorgrigas</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">CC BY-SA 3.0</a></span></figcaption>
+      </figure>
+      <p>OpenAI открывает ChatGPT для всех. К&nbsp;январю 2023 года у&nbsp;него, по&nbsp;оценке банка UBS, 100&nbsp;млн пользователей в&nbsp;месяц.</p>
+      <p>Примаков формулирует главное отличие этого этапа так: «впервые носитель не&nbsp;только хранит и&nbsp;передаёт, но&nbsp;и&nbsp;производит содержание».</p>
+    </li>
+  </ol>
+</section>
+
+<!-- 5. Платон -->
+<section class="platon" id="platon" aria-labelledby="platon-title">
+  <figure class="platon__media">
+    <img src="assets/img/thoth.webp" width="1600" height="1971" loading="lazy" alt="Каменная стела с рельефом: божество с головой ибиса">
+    <figcaption>Египетская стела I–II вв. н.&nbsp;э. с&nbsp;богом Тотом в&nbsp;нескольких обличьях, справа он с&nbsp;головой ибиса. У&nbsp;Платона этот бог зовётся Тевтом. Метрополитен-музей. <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Two-sided_stela_of_pluriform_Thoth_(1st-2nd_centuries_AD)_MET_55.143.jpg">Metropolitan Museum of Art</a> / Wikimedia Commons, CC0</span></figcaption>
+  </figure>
+  <div class="platon__text prose prose--inline">
+    <h2 id="platon-title">Царь и бог письма</h2>
+    <p>Сократ в&nbsp;«Федре» рассказывает притчу. Египетский бог Тевт изобрёл число, счёт, геометрию, шашки и&nbsp;письмена и&nbsp;пришёл показать их царю Тамусу. Про письмо Тевт сказал, что оно сделает египтян «более мудрыми и&nbsp;памятливыми». Царь ответил так:</p>
+    <blockquote class="scroll">
+      <p>«В души научившихся им они вселят забывчивость, так как будет лишена упражнения память: припоминать станут извне, доверяясь письму, по&nbsp;посторонним знакам, а&nbsp;не&nbsp;изнутри, сами собою. Стало быть, ты нашел средство не&nbsp;для памяти, а&nbsp;для припоминания. Ты даешь ученикам мнимую, а&nbsp;не&nbsp;истинную мудрость. Они у&nbsp;тебя будут многое знать понаслышке, без обучения, и&nbsp;будут казаться многознающими, оставаясь в&nbsp;большинстве невеждами».</p>
+      <footer>Платон, «Федр», 275a–b. <a href="http://www.egyptology.ru/antiq/platon-2.htm">Текст фрагмента</a></footer>
+    </blockquote>
+    <p>Этот фрагмент Примаков зачитал студентам почти дословно. Предупреждение против письма мы знаем только потому, что Платон его записал.</p>
+    <p>Последствия письма оказались другими, чем ждал Тамус. В&nbsp;1963 году антрополог Джек Гуди и&nbsp;литературовед Ян Уотт описали, что происходит с&nbsp;обществом, когда оно начинает писать. В&nbsp;устной культуре предание незаметно подстраивается под настоящее: то, что перестало быть нужным, просто забывается. Записанный текст остаётся неизменным, его можно сравнить со&nbsp;старым и&nbsp;усомниться. Из&nbsp;этой возможности сомневаться, по&nbsp;мысли Гуди и&nbsp;Уотта, выросли греческая история и&nbsp;философия.</p>
+    <p>Книга, однако, хранит чужую мысль, а&nbsp;думать над ней приходится читателю. Нейросеть берёт на&nbsp;себя и&nbsp;эту часть работы. Поэтому вопрос, который задал Тамус, приходится задавать заново.</p>
+  </div>
+</section>
+
+<!-- 6. Наука -->
+<section class="prose" id="nauka" aria-labelledby="nauka-title">
+  <h2 id="nauka-title">Что говорят исследования</h2>
+
+  <h3>Помним, где лежит</h3>
+  <p>В 2011 году Бетси Спэрроу, Дженни Лю и&nbsp;Дэниел Вегнер опубликовали в&nbsp;Science серию из&nbsp;четырёх экспериментов. Если человек ожидает, что информация останется ему доступна, он хуже помнит саму информацию и&nbsp;лучше помнит, где её найти. В&nbsp;одном из&nbsp;опытов участники лучше запоминали, в&nbsp;какую папку на&nbsp;компьютере сохранили факт, чем сам факт. Авторы назвали интернет внешней памятью, на&nbsp;которую мы полагаемся так&nbsp;же, как на&nbsp;память друга или коллеги.</p>
+
+  <h3>Эссе, которое не помнит автор</h3>
+  <p>В июне 2025 года группа Натальи Космыны из&nbsp;MIT Media Lab выложила препринт под названием «Ваш мозг на&nbsp;ChatGPT». 54 студента и&nbsp;сотрудника пяти бостонских вузов писали короткие эссе за&nbsp;20 минут. Одни работали с&nbsp;ChatGPT, другие с&nbsp;поисковиком, третьи без всего. Во&nbsp;время работы у&nbsp;них снимали ЭЭГ. Самая слабая связность мозговых сетей оказалась у&nbsp;группы с&nbsp;ChatGPT, самая сильная у&nbsp;тех, кто писал сам.</p>
+  <p>Сразу после первой сессии участников попросили процитировать собственное эссе.</p>
+</section>
+
+<figure class="units" id="units" aria-labelledby="units-cap">
+  <div class="units__switch" role="radiogroup" aria-label="Что показать на графике">
+    <button type="button" role="radio" aria-checked="true" data-mode="fail">Не смогли процитировать эссе</button>
+    <button type="button" role="radio" aria-checked="false" data-mode="ok">Дали точную цитату</button>
+  </div>
+  <div class="units__rows">
+    <div class="units__row" data-fail="15" data-ok="0"><p class="units__name">С ChatGPT</p><div class="units__dots" aria-hidden="true"></div><p class="units__val"></p></div>
+    <div class="units__row" data-fail="2" data-ok="15"><p class="units__name">С поисковиком</p><div class="units__dots" aria-hidden="true"></div><p class="units__val"></p></div>
+    <div class="units__row" data-fail="2" data-ok="16"><p class="units__name">Без инструментов</p><div class="units__dots" aria-hidden="true"></div><p class="units__val"></p></div>
+  </div>
+  <figcaption id="units-cap">Один квадрат — один участник, в&nbsp;каждой группе 18 человек. Первая сессия, вопрос задан через несколько минут после того, как эссе было написано. Источник: <a href="https://arxiv.org/abs/2506.08872">Kosmyna et&nbsp;al., MIT Media Lab, 2025</a>, препринт, не&nbsp;прошёл рецензирование.</figcaption>
+</figure>
+
+<section class="prose">
+  <p>Правильную цитату в&nbsp;группе ChatGPT не&nbsp;дал никто.</p>
+  <p>У исследования много ограничений, и&nbsp;авторы о&nbsp;них пишут сами. Это препринт, он не&nbsp;прошёл рецензирование. В&nbsp;итоговой, четвёртой сессии участвовали всего 18 человек; на&nbsp;это указал нейробиолог Адам Грин из&nbsp;Джорджтаунского университета. Педагогический психолог Гвидо Макрански из&nbsp;Копенгагенского университета заметил, что в&nbsp;жизни студенты работают с&nbsp;ИИ иначе, чем в&nbsp;лаборатории. Сама Космына в&nbsp;комментарии журналу Nature просила не&nbsp;делать вывода, что ChatGPT делает людей глупее: такого исследование не&nbsp;показывает.</p>
+
+  <figure class="video">
+    <div class="video__frame" data-yt="R_rorC8gj2o" data-title="Is Using ChatGPT to Write Your Essay Bad for Your Brain? New MIT Study Explained.">
+      <button type="button" class="video__play" aria-label="Смотреть видео TIME об исследовании MIT">
+        <img src="https://i.ytimg.com/vi/R_rorC8gj2o/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+        <span class="video__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <figcaption>Наталья Космына рассказывает журналу TIME, как проходил эксперимент и&nbsp;чего он не&nbsp;доказывает. На&nbsp;английском. <span class="credit">Видео: <a href="https://www.youtube.com/watch?v=R_rorC8gj2o">TIME / YouTube</a></span></figcaption>
+  </figure>
+
+  <h3>Чем больше доверие, тем меньше проверки</h3>
+  <p>Microsoft Research и&nbsp;Университет Карнеги — Меллон опросили 319 работников умственного труда, которые пользуются генеративным ИИ, и&nbsp;собрали 936 примеров из&nbsp;их работы. Статью представили на&nbsp;конференции CHI 2025. Чем больше человек доверял ИИ, тем реже он включал критическое мышление. Чем увереннее он был в&nbsp;собственных силах, тем чаще. Менялась и&nbsp;сама работа: по&nbsp;наблюдению авторов, критическое мышление сдвигалось к&nbsp;проверке ответов машины, их встраиванию в&nbsp;текст и&nbsp;контролю над задачей.</p>
+
+  <p>Нейролингвист Татьяна Черниговская делает из&nbsp;похожих данных жёсткий вывод. На&nbsp;марафоне «Знание.Наука» в&nbsp;октябре 2025 года она сказала:</p>
+  <blockquote class="voice">
+    <p>«Есть уже немало исследований работы мозга, с&nbsp;применением как энцефалограмм, так и&nbsp;МРТ, которые наглядно показывают: передача существенной части интеллектуальной активности вовне, тем&nbsp;же нейросетям, приводит к&nbsp;стремительному ухудшению работы мозга и&nbsp;сбросу интеллектуальной активности».</p>
+    <footer>Татьяна Черниговская, нейролингвист, академик РАО</footer>
+  </blockquote>
+  <p>Исследование MIT при этом пока остаётся препринтом на&nbsp;54 участниках, а&nbsp;его авторы просят не&nbsp;читать его как доказательство отупения.</p>
+</section>
+
+<!-- 7. Калькулятор -->
+<section class="calc" id="kalkulyator" aria-labelledby="calc-title">
+  <figure class="calc__media">
+    <img src="assets/img/ti30.webp" width="1600" height="2133" loading="lazy" alt="Карманный калькулятор Texas Instruments TI-30 с красным светодиодным экраном">
+    <figcaption>Texas Instruments TI-30, 1976 год. <span class="credit">Фото: <a href="https://commons.wikimedia.org/wiki/File:Vintage_Texas_Instruments_TI-30_Pocket_Calculator,_Red_LED,_Made_in_USA,_A_Very_Widely_Used_Calculator,_Price_Was_$24.95_in_1976_(8732557514).jpg">Joe Haupt</a> / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.ru">CC BY-SA 2.0</a></span></figcaption>
+  </figure>
+  <div class="calc__text prose prose--inline">
+    <h2 id="calc-title">Калькулятор не убил математику</h2>
+    <p>3 апреля 1986 года у&nbsp;отеля «Шератон» в&nbsp;Вашингтоне учителя математики вышли с&nbsp;пикетом. Национальный совет учителей математики США (NCTM) призвал ввести калькулятор в&nbsp;школьную программу «на всех уровнях», в&nbsp;классе, дома и&nbsp;на&nbsp;контрольных. Против выступили около 15 человек по&nbsp;данным AP и&nbsp;около 20 по&nbsp;данным Washington Post, при нескольких тысячах участников съезда. Их аргументы звучат знакомо.</p>
+    <blockquote class="voice voice--small">
+      <p>«Риск в&nbsp;том, что, получив костыль, ты опираешься на&nbsp;него всё сильнее».</p>
+      <footer>Иви Эндрюс, учительница из&nbsp;Орегона, в&nbsp;интервью Christian Science Monitor, 1986</footer>
+    </blockquote>
+    <p>Исследования их опасений не&nbsp;подтвердили. В&nbsp;том&nbsp;же 1986 году Рэй Хембри и&nbsp;Дональд Дессарт свели вместе 79 исследований. Калькулятор в&nbsp;сочетании с&nbsp;обычным обучением улучшал навыки счёта на&nbsp;бумаге у&nbsp;среднего школьника. Исключением оказался четвёртый класс.</p>
+  </div>
+</section>
+
+<section class="otto" aria-labelledby="otto-title">
+  <div class="prose prose--inline">
+    <h3 id="otto-title">Блокнот Отто</h3>
+    <p>Философы предлагают смотреть на&nbsp;такие инструменты как на&nbsp;часть самого мышления. В&nbsp;1998 году Энди Кларк и&nbsp;Дэвид Чалмерс опубликовали статью «Расширенный разум». В&nbsp;ней две героини, Инга и&nbsp;Отто, идут в&nbsp;музей.</p>
+  </div>
+  <div class="otto__pair">
+    <div class="otto__card">
+      <p class="otto__who">Инга</p>
+      <p>Помнит адрес музея.</p>
+      <p class="otto__where">Память: в&nbsp;голове</p>
+    </div>
+    <div class="otto__card otto__card--note">
+      <p class="otto__who">Отто</p>
+      <p>Страдает болезнью Альцгеймера и&nbsp;записывает всё в&nbsp;блокнот.</p>
+      <p class="otto__where">Память: в&nbsp;блокноте</p>
+    </div>
+  </div>
+  <div class="prose prose--inline">
+    <p>По мысли авторов, блокнот играет для Отто ту&nbsp;же роль, что биологическая память для Инги, и&nbsp;вполне может считаться частью его разума. Если так, телефон с&nbsp;контактами ничего у&nbsp;нас не&nbsp;отнимает. Мы просто храним память в&nbsp;другом месте.</p>
+    <p>Калькулятор, правда, складывает числа, но&nbsp;не&nbsp;решает за&nbsp;ученика, какие числа складывать. Блокнот Отто помнит дорогу, но&nbsp;идёт в&nbsp;музей сам Отто. Нейросеть может сделать и&nbsp;то и&nbsp;другое.</p>
+  </div>
+</section>
+
+<!-- 8. Аудитория -->
+<section class="prose" id="auditoriya" aria-labelledby="aud-title">
+  <h2 id="aud-title">Тем временем в аудитории</h2>
+  <p>В 2025 году исследователи ВШЭ под руководством Ярослава Кузьминова выяснили, что ИИ в&nbsp;учёбе использовали 87% российских студентов. Главный вывод касался того, кто и&nbsp;как это делает.</p>
+</section>
+
+<figure class="hse" aria-labelledby="hse-cap">
+  <div class="hse__block">
+    <div class="grid100" role="img" aria-label="87 закрашенных квадратов из 100"></div>
+    <p class="hse__caption"><b>87 из&nbsp;100</b> российских студентов использовали ИИ в&nbsp;учёбе</p>
+  </div>
+  <div class="hse__block">
+    <p class="hse__q">Куда уходит сэкономленное время</p>
+    <div class="split" role="img" aria-label="Около 40 процентов на сложные и творческие задачи, около 60 процентов на отдых">
+      <span class="split__a" style="--v:40">около 40%</span><span class="split__b" style="--v:60">около 60%</span>
+    </div>
+    <div class="split__legend"><span class="split__key split__key--a">на более сложные и&nbsp;творческие задачи</span><span class="split__key split__key--b">на развлечения и&nbsp;отдых</span></div>
+  </div>
+  <figcaption id="hse-cap">Источник: <a href="https://ioe.hse.ru/news/1073792102.html">Институт образования НИУ ВШЭ, 2025</a></figcaption>
+</figure>
+
+<section class="prose">
+  <blockquote class="voice">
+    <p>«Главным открытием стала прямая связь между академическими результатами и&nbsp;использованием ИИ. Студенты с&nbsp;высокими оценками воспринимают технологию как экономию времени — освобождаются от&nbsp;рутины ради творческих задач. Студенты с&nbsp;низкими оценками просто списывают решения, никак не&nbsp;развивая тем самым свои способности».</p>
+    <footer>Ярослав Кузьминов, научный руководитель направления Института образования НИУ ВШЭ</footer>
+  </blockquote>
+  <p>Вузы ищут правила на&nbsp;ходу. В&nbsp;2023 году выпускник РГГУ Александр Жадан рассказал, что защитил диплом, написанный с&nbsp;помощью ChatGPT. Университет тогда предложил ограничить доступ к&nbsp;чат-боту в&nbsp;образовании, но&nbsp;диплом у&nbsp;студента не&nbsp;отобрали. В&nbsp;ВШЭ сегодня общего запрета нет, но&nbsp;использование нейросети нужно декларировать. Если в&nbsp;выпускной работе найдут незаявленный сгенерированный текст, студента могут отчислить.</p>
+</section>
+
+<!-- 9. Нет, не нравится -->
+<section class="night" id="ne-nravitsya" aria-labelledby="night-title">
+  <figure class="night__media">
+    <img src="assets/img/phone-dark.webp" width="1600" height="1067" loading="lazy" alt="Лицо человека в темноте, освещённое экраном смартфона">
+  </figure>
+  <div class="night__inner">
+    <h2 id="night-title">«Нет, не нравится»</h2>
+    <p>Сам Примаков не&nbsp;делает вид, что смотрит на&nbsp;это спокойно. Он рассказал студентам старый анекдот про «новых русских»: один вживил себе телефон в&nbsp;ладонь, другой микрофон в&nbsp;зуб, а&nbsp;третий сидит молча, потому что у&nbsp;него «факс пошёл». По&nbsp;словам Примакова, анекдот предсказал, что человек сам станет носителем информации. И&nbsp;добавил:</p>
+    <blockquote class="night__quote">
+      <p>«Нравится ли мне это как человеку пятидесяти лет? Нет, не&nbsp;нравится. Но&nbsp;придётся с&nbsp;этим жить».</p>
+    </blockquote>
+    <blockquote class="night__quote night__quote--second">
+      <p>«Уже сейчас что-то пишут для Claude, для Perplexity — и&nbsp;наоборот, они уже пишут для нас».</p>
+    </blockquote>
+    <p>Будущих журналистов эта фраза касается напрямую: часть текстов уже пишется для того, чтобы их прочитала и&nbsp;пересказала машина.</p>
+  </div>
+  <p class="night__credit">Фото: <a href="https://www.japanexperterna.se">Japanexperterna</a> / <a href="https://commons.wikimedia.org/wiki/File:Person_looking_at_smartphone_in_the_dark_(2).jpg">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.ru">CC BY-SA 2.0</a></p>
+</section>
+
+<!-- 10. Человек с чипом -->
+<section class="prose final" id="chip" aria-labelledby="chip-title">
+  <h2 id="chip-title">Человек с чипом</h2>
+  <p>Под конец Примаков предложил студентам мысленный эксперимент. Работодатель выбирает между двумя кандидатами, оба хорошо пишут, но&nbsp;у&nbsp;одного есть «аппаратные дополнительные возможности».</p>
+  <blockquote class="pull pull--small">
+    <p>«Тексты у&nbsp;обоих одинаково хорошие, и&nbsp;вы не&nbsp;отличите, где человеческое начало: если&nbsp;бы вам не&nbsp;сказали, вы&nbsp;бы и&nbsp;не&nbsp;поняли».</p>
+  </blockquote>
+</section>
+
+<section class="duel" aria-label="Две позиции">
+  <blockquote class="duel__side duel__side--chip">
+    <p>«И я думаю, что работодатель будущего возьмёт человека с&nbsp;чипом в&nbsp;башке. Потому что это просто путь прогресса человеческой цивилизации: так ты растёшь по&nbsp;социально-экономической лестнице».</p>
+    <footer>Евгений Примаков</footer>
+  </blockquote>
+  <blockquote class="duel__side duel__side--head">
+    <p>«Учиться нужно всегда, но&nbsp;не&nbsp;для того, чтобы забить голову информацией, которая и&nbsp;так есть в&nbsp;телефоне у&nbsp;каждого, а&nbsp;просто чтобы хорошо работала голова».</p>
+    <footer>Татьяна Черниговская</footer>
+  </blockquote>
+</section>
+
+<section class="prose final">
+  <p>Письменность страх Тамуса пережила: если верить Гуди и&nbsp;Уотту, грамотность дала людям историю и&nbsp;философию. Но&nbsp;Тевт принёс царю средство для хранения памяти. Нейросеть выдаёт готовый ответ раньше, чем человек успел подумать. Работодатель Примакова выберет того, кто быстрее. Нынешним студентам предстоит выяснить, сумеют&nbsp;ли они остаться ещё и&nbsp;теми, кто думает сам.</p>
+
+  <figure class="video">
+    <div class="video__frame" data-yt="CFQGfd4hpO4" data-title="«ИИ vs мозг: на пороге битвы интеллектов». Татьяна Черниговская">
+      <button type="button" class="video__play" aria-label="Смотреть лекцию Татьяны Черниговской «ИИ vs мозг»">
+        <img src="https://i.ytimg.com/vi/CFQGfd4hpO4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+        <span class="video__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <figcaption>Татьяна Черниговская, «ИИ vs мозг: на&nbsp;пороге битвы интеллектов». Лекторий марафона «Знание. Первых», 2024. <span class="credit">Видео: <a href="https://www.youtube.com/watch?v=CFQGfd4hpO4">канал «Искусство жить» / YouTube</a></span></figcaption>
+  </figure>
+</section>
+
+<!-- 11. Источники -->
+<section class="sources" id="istochniki" aria-labelledby="src-title">
+  <h2 id="src-title">Источники и авторы</h2>
+
+  <div class="sources__cols">
+    <div>
+      <h3>Встреча</h3>
+      <ul>
+        <li>Цитаты Евгения Примакова — расшифровка встречи со&nbsp;студентами, сверена с&nbsp;аудиозаписью.</li>
+        <li>Биография: <a href="https://www.kommersant.ru/doc/8624368">«Коммерсантъ», 27.04.2026</a>; <a href="https://novayagazeta.eu/articles/2026/04/27/putin-uvolil-glavu-rossotrudnichestva-evgeniia-primakova-i-naznachil-na-ego-mesto-igoria-chaiku-news">«Новая газета Европа», 27.04.2026</a>.</li>
+      </ul>
+
+      <h3>Платон и теория медиа</h3>
+      <ul>
+        <li>Платон. Федр, 274c–275b. <a href="http://www.egyptology.ru/antiq/platon-2.htm">Русский текст фрагмента</a>; <a href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0174:text=Phaedrus:page=275">английский перевод, Perseus</a>.</li>
+        <li>Innis H. Empire and Communications. 1950. <a href="https://en.wikipedia.org/wiki/Empire_and_Communications">Описание</a>.</li>
+        <li>Goody J., Watt I. <a href="https://doi.org/10.1017/S0010417500001730">The Consequences of Literacy</a> // Comparative Studies in Society and History. 1963. Vol.&nbsp;5, №&nbsp;3.</li>
+      </ul>
+
+      <h3>Таймлайн</h3>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Proto-cuneiform">Proto-cuneiform</a> (Wikipedia).</li>
+        <li><a href="https://bl.iro.bl.uk/entities/product/b97e359c-e416-4385-b87a-65659a6eeec1">Incunabula Short Title Catalogue, British Library</a>.</li>
+        <li><a href="https://www.seas.upenn.edu/about/history-heritage/eniac/">Penn Engineering: ENIAC</a>.</li>
+        <li>Hilbert M., López P. <a href="https://doi.org/10.1126/science.1200970">The World’s Technological Capacity to Store, Communicate, and Compute Information</a> // Science. 2011.</li>
+        <li><a href="https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/">Reuters: ChatGPT sets record for fastest-growing user base, 01.02.2023</a>.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Память и мышление</h3>
+      <ul>
+        <li><a href="https://kaspersky.co.za/about/press-releases/kaspersky-lab-diagnoses-digital-amnesia-consumers-struggle-to-recall-memories-trusted-to-connected-devices">Kaspersky Lab: Digital Amnesia, 2015</a>.</li>
+        <li>Sparrow B., Liu J., Wegner D. <a href="https://doi.org/10.1126/science.1207745">Google Effects on Memory</a> // Science. 2011.</li>
+        <li>Kosmyna N. et al. <a href="https://arxiv.org/abs/2506.08872">Your Brain on ChatGPT</a>. arXiv, 2025 (препринт).</li>
+        <li><a href="https://www.scientificamerican.com/article/does-using-chatgpt-really-change-your-brain-activity">Does Using ChatGPT Change Your Brain Activity? Study Sparks Debate</a> // Scientific American / Nature, 2025.</li>
+        <li>Lee H.-P. et al. <a href="https://doi.org/10.1145/3706598.3713778">The Impact of Generative AI on Critical Thinking</a> // CHI 2025.</li>
+        <li><a href="https://znanierussia.ru/news/tatyana-chernigovskaya-na-marafone-znanienauka-tvorcheskoe-ozarenie-ostaetsya-prerogativoj-cheloveka-a-ne-nejrosetej">Татьяна Черниговская на&nbsp;марафоне «Знание.Наука»</a>, Общество «Знание», 30.10.2025.</li>
+      </ul>
+
+      <h3>Калькулятор и расширенный разум</h3>
+      <ul>
+        <li><a href="https://www.csmonitor.com/1986/0509/dcalc-f.html">The great calculator debate</a> // Christian Science Monitor. 09.05.1986.</li>
+        <li><a href="https://www.transum.org/Maths/Activity/Calculator/Survey/">О пикете 3 апреля 1986 года</a> (Transum).</li>
+        <li>Hembree R., Dessart D. <a href="https://doi.org/10.2307/749255">Effects of Hand-Held Calculators in Precollege Mathematics Education: A Meta-Analysis</a> // JRME. 1986.</li>
+        <li>Clark A., Chalmers D. <a href="https://doi.org/10.1093/analys/58.1.7">The Extended Mind</a> // Analysis. 1998.</li>
+      </ul>
+
+      <h3>Российские вузы</h3>
+      <ul>
+        <li><a href="https://ioe.hse.ru/news/1073792102.html">Нейросети разделили студентов на&nbsp;пользователей и&nbsp;потребителей</a>, Институт образования НИУ ВШЭ, 05.08.2025.</li>
+        <li><a href="https://www.hse.ru/studyspravka/ai_guidelines">Правила использования ИИ</a>, НИУ ВШЭ.</li>
+        <li><a href="https://meduza.io/feature/2023/03/15/pomnite-kak-student-rggu-napisal-diplom-s-pomoschyu-chatgpt-i-dazhe-zaschitil-ego">«Медуза» о&nbsp;дипломе выпускника РГГУ</a>, 15.03.2023; <a href="https://novayagazeta.eu/articles/2023/02/01/rggu-predlozhil-ogranichit-dostup-k-chat-botu-chatgpt-v-universitetakh-ranee-student-vuza-zashchitil-diplom-napisannyi-etoi-neirosetiu-news">«Новая газета Европа»</a>, 01.02.2023.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Фото и видео</h3>
+  <p class="sources__media">Все фотографии — из&nbsp;Wikimedia Commons, автор и&nbsp;лицензия указаны в&nbsp;подписи к&nbsp;каждому снимку. Серверы на&nbsp;обложке и&nbsp;в&nbsp;таймлайне: Victorgrigas, CC BY-SA 3.0. Табличка из&nbsp;Урука: Osama Shukir Muhammed Amin, CC BY-SA 4.0. Платон: Marie-Lan Nguyen, общественное достояние. Библия Гутенберга: NYC Wanderer (Kevin Eng), CC BY-SA 2.0. ENIAC: армия США, общественное достояние. Стела с&nbsp;Тотом: Метрополитен-музей, CC0. Калькулятор TI-30: Joe Haupt, CC BY-SA 2.0. Смартфон в&nbsp;темноте: Japanexperterna, CC BY-SA 2.0. Видео встроены с&nbsp;YouTube: TIME; канал «Искусство жить».</p>
+
+  <div class="authors">
+    <p class="authors__label">Авторы</p>
+    <p class="authors__names">Элена Мустафина<br>Марина Штукатурова</p>
+    <p class="authors__note">Мультимедийный лонгрид, 2026. По&nbsp;мотивам встречи с&nbsp;Евгением Примаковым.</p>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
